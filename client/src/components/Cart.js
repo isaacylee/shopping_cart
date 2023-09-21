@@ -8,15 +8,15 @@ const CartItem = ({ title, quantity, price }) => {
   )
 }
 
-const Cart = ({ cartItems }) => {
+const Cart = ({ cartItems, onCheckout }) => {
   const cartTotal = (cartItems) => {
     let total = 0;
     cartItems.forEach(item => {
       total += item.price * item.quantity
     })
-    return total
+    return total.toFixed(2);
   }
-
+  
   return (
     <div className="cart">
         <h2>Your Cart</h2>
@@ -40,7 +40,7 @@ const Cart = ({ cartItems }) => {
           </tfoot>
         </table>
         <div className="checkout-button">
-          <button className="checkout">Checkout</button>
+          <button className="checkout" onClick={onCheckout}>Checkout</button>
         </div>
       </div>
   )

@@ -169,20 +169,16 @@ input[type="number"] {
 }
 
 .add-form h3,
-.edit-form h3,
-.add-form form,
-.edit-form form{
+.add-form form {
   display: none;
 }
 
-.add-form.visible .add-product-button .edit-form.visible {
+.add-form.visible .add-product-button {
   display: none;
 }
 
 .add-form.visible h3,
-.edit-form.visible h3,
-.add-form.visible form,
-.edit-form.visible form {
+.add-form.visible form {
   display: block;
 }
 

@@ -1,14 +1,13 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const AddProductForm = ({ onSubmit }) => {
   const [title, setTitle] = useState("");
   const [price, setPrice] = useState("");
   const [quantity, setQuantity] = useState("");
-  const [displayAddProductForm, setDisplayAddProductFormm] = useState(false)
+  const [displayAddProductForm, setDisplayAddProductForm] = useState(false)
 
-  const toggleAddProductForm = (e) => {
-    e.preventDefault();
-    setDisplayAddProductFormm(!displayAddProductForm)
+  const toggleAddProductForm = () => {
+    setDisplayAddProductForm(!displayAddProductForm)
   }
 
   const handleSubmit = (e) => {
@@ -24,7 +23,7 @@ const AddProductForm = ({ onSubmit }) => {
 
   return (
     <div className={displayAddProductForm ? "add-form visible" : "add-form"}>
-       <p><button className="add-product-button" onClick={toggleAddProductForm}>Add A Product</button></p>
+      <p><button className="add-product-button" onClick={toggleAddProductForm}>Add A Product</button></p>
       <h3>Add Product</h3>
       <form action="" onSubmit={handleSubmit}>
         <div className="input-group">

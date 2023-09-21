@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-const EditForm = ({ display, productId, toggle, title, price, quantity, onUpdateProduct }) => {
+const EditForm = ({ product, toggle, onUpdateProduct }) => {
+  const { _id: productId, title, price, quantity } = product;
   const [newTitle, setNewTitle] = useState(title);
   const [newPrice, setNewPrice] = useState(price);
   const [newQuantity, setNewQuantity] = useState(quantity);
@@ -18,12 +19,8 @@ const EditForm = ({ display, productId, toggle, title, price, quantity, onUpdate
     )
   }
 
-  const closeForm = () => {
-
-  }
-
   return (
-    <div className={display ? "edit-form visible" : "edit-form"}>
+    <div className="edit-form">
       <h3>Edit Product</h3>
       <form action="" onSubmit={handleUpdate}>
         <div className="input-group">
