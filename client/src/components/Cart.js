@@ -1,5 +1,3 @@
-import cartItems from "../mockData/cartData";
-
 const CartItem = ({ title, quantity, price }) => {
   return (
     <tr>
@@ -10,11 +8,19 @@ const CartItem = ({ title, quantity, price }) => {
   )
 }
 
-const Cart = () => {
+const Cart = ({ cartItems }) => {
+  const cartTotal = (cartItems) => {
+    let total = 0;
+    cartItems.forEach(item => {
+      total += item.price * item.quantity
+    })
+    return total
+  }
+
   return (
-    <div class="cart">
+    <div className="cart">
         <h2>Your Cart</h2>
-        <table class="cart-items">
+        <table className="cart-items">
           <thead>
             <tr>
               <th scope="col">Item</th>
@@ -23,18 +29,18 @@ const Cart = () => {
             </tr>
           </thead>
           <tbody>
-            {cartItems.map(({ id, title, price, quantity }) => (
-              <CartItem key={id} title={title} price={price} quantity={quantity} />
+            {cartItems.map(({ _id, title, price, quantity }) => (
+              <CartItem key={_id} title={title} price={price} quantity={quantity} />
             ))}
           </tbody>
           <tfoot>
             <tr>
-              <td colspan="3" class="total">Total: $729.98</td>
+              <td colSpan="3" className="total">Total: ${cartTotal(cartItems)}</td>
             </tr>
           </tfoot>
         </table>
-        <div class="checkout-button">
-          <button class="checkout">Checkout</button>
+        <div className="checkout-button">
+          <button className="checkout">Checkout</button>
         </div>
       </div>
   )

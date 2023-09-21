@@ -1,14 +1,40 @@
-const EditForm = () => {
+import { useEffect, useState } from "react";
+
+const EditForm = ({ display, productId, toggle, title, price, quantity, onUpdateProduct }) => {
+  const [newTitle, setNewTitle] = useState(title);
+  const [newPrice, setNewPrice] = useState(price);
+  const [newQuantity, setNewQuantity] = useState(quantity);
+
+  const handleUpdate = (e) => {
+    e.preventDefault();
+    onUpdateProduct(
+      productId,
+      {
+        title: newTitle,
+        price: parseFloat(newPrice),
+        quantity: parseInt(newQuantity, 10)
+      },
+      toggle
+    )
+  }
+
+  const closeForm = () => {
+
+  }
+
   return (
-    <div className="edit-form">
+    <div className={display ? "edit-form visible" : "edit-form"}>
       <h3>Edit Product</h3>
-      <form>
+      <form action="" onSubmit={handleUpdate}>
         <div className="input-group">
           <label htmlFor="product-name">Product Name</label>
           <input
             type="text"
             id="product-name"
-            value="Apple 10.5-Inch iPad Pro"
+            value={newTitle}
+            onChange={(e) => {
+              setNewTitle(e.target.value)
+            }}
             aria-label="Product Name"
           />
         </div>
@@ -18,7 +44,10 @@ const EditForm = () => {
           <input
             type="number"
             id="product-price"
-            value="649.99"
+            value={newPrice}
+            onChange={(e) => {
+              setNewPrice(e.target.value)
+            }}
             aria-label="Product Price"
           />
         </div>
@@ -28,14 +57,17 @@ const EditForm = () => {
           <input
             type="number"
             id="product-quantity"
-            value="2"
+            value={newQuantity}
+            onChange={(e) => {
+              setNewQuantity(e.target.value)
+            }}
             aria-label="Product Quantity"
           />
         </div>
 
         <div className="actions form-actions">
           <button type="submit">Update</button>
-          <button type="button">Cancel</button>
+          <button type="button" onClick={toggle}>Cancel</button>
         </div>
       </form>
     </div>

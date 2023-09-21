@@ -1,29 +1,36 @@
 <!-- TOC -->
 
 - [1. API Documentation](#1-api-documentation)
+
   - [1.1. GET /api/products](#11-get-apiproducts)
     - [1.1.1. Expected parameters](#111-expected-parameters)
     - [1.1.2. Example Response](#112-example-response)
+
   - [1.2. POST /api/products](#12-post-apiboards)
     - [1.2.1. Expected Payload](#121-expected-payload)
     - [1.2.2. Successful Response](#122-successful-response)
       - [1.2.2.1. Example Response](#1221-example-response)
+
   - [1.3. PUT /api/products/:id](#13-put-getproductsid)
     - [1.3.1. Expected Payload](#131-expected-payload)
     - [1.3.2. Successful Response](#132-successful-response)
       - [1.3.2.1. Example Response](#1321-example-response)
-  - [1.4. POST /api/product/:id](#14-delete-apiproductsid)
+
+  - [1.4. DELETE /api/product/:id](#14-delete-apiproductsid)
     - [1.4.1. Expected Payload](#141-expected-payload)
     - [1.4.2. Successful Response](#142-successful-response)
       - [1.4.2.1. Example Response](#1421-example-response)
+
   - [1.5. GET /api/cart/](#15-get-apicart)
     - [1.5.1. Expected Payload](#171-expected-payload)
     - [1.5.2. Successful Response](#172-successful-response)
       - [1.5.2.1. Example Response](#1721-example-response)
+
   - [1.6. POST /api/checkout](#16-post-apicheckout)
     - [1.6.1. Expected Payload](#181-expected-payload)
     - [1.6.2. Successful Response](#182-successful-response)
       - [1.6.2.1. Example Response](#1821-example-response)
+
   - [1.7. POST /api/add-to-cart](#17-post-apiadd-to-cart)
     - [1.7.1. Expected Payload](#191-expected-payload)
     - [1.7.2. Successful Response](#192-successful-response)
