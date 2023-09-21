@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const EditForm = ({ product, toggle, onUpdateProduct }) => {
+const EditProductForm = ({ product, toggle, onUpdateProduct }) => {
   const { _id: productId, title, price, quantity } = product;
   const [newTitle, setNewTitle] = useState(title);
   const [newPrice, setNewPrice] = useState(price);
@@ -71,4 +71,4 @@ const EditForm = ({ product, toggle, onUpdateProduct }) => {
   );
 }
  
-export default EditForm;
+export default EditProductForm;

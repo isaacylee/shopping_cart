@@ -1,5 +1,5 @@
 import { useState } from "react";
-import EditForm from "./EditForm"
+import EditProductForm from "./EditProductForm";
 
 const Product = ({ product, onAddToCart, onUpdateProduct, onDeleteProduct }) => {
   const { _id: productId, title, price, quantity } = product;
@@ -32,7 +32,7 @@ const Product = ({ product, onAddToCart, onUpdateProduct, onDeleteProduct }) => 
         <button className="delete-button" onClick={handleDeleteProduct}><span>X</span></button>
       </div>
       {displayEditForm ? (
-        <EditForm 
+        <EditProductForm 
           toggle={toggleEditForm}
           product={product}
           onUpdateProduct={onUpdateProduct}

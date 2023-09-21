@@ -27535,8 +27535,8 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
-var _editForm = require("./EditForm");
-var _editFormDefault = parcelHelpers.interopDefault(_editForm);
+var _editProductForm = require("./EditProductForm");
+var _editProductFormDefault = parcelHelpers.interopDefault(_editProductForm);
 var _s = $RefreshSig$();
 const Product = ({ product, onAddToCart, onUpdateProduct, onDeleteProduct })=>{
     _s();
@@ -27638,7 +27638,7 @@ const Product = ({ product, onAddToCart, onUpdateProduct, onDeleteProduct })=>{
                 lineNumber: 24,
                 columnNumber: 7
             }, undefined),
-            displayEditForm ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _editFormDefault.default), {
+            displayEditForm ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _editProductFormDefault.default), {
                 toggle: toggleEditForm,
                 product: product,
                 onUpdateProduct: onUpdateProduct
@@ -27665,11 +27665,11 @@ $RefreshReg$(_c, "Product");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./EditForm":"42Uhe","react":"21dqq"}],"42Uhe":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$db68 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","./EditProductForm":"2Pful"}],"2Pful":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$56f7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$db68.prelude(module);
+$parcel$ReactRefreshHelpers$56f7.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -27677,7 +27677,7 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _s = $RefreshSig$();
-const EditForm = ({ product, toggle, onUpdateProduct })=>{
+const EditProductForm = ({ product, toggle, onUpdateProduct })=>{
     _s();
     const { _id: productId, title, price, quantity } = product;
     const [newTitle, setNewTitle] = (0, _react.useState)(title);
@@ -27697,7 +27697,7 @@ const EditForm = ({ product, toggle, onUpdateProduct })=>{
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                 children: "Edit Product"
             }, void 0, false, {
-                fileName: "src/components/EditForm.js",
+                fileName: "src/components/EditProductForm.js",
                 lineNumber: 24,
                 columnNumber: 7
             }, undefined),
@@ -27712,7 +27712,7 @@ const EditForm = ({ product, toggle, onUpdateProduct })=>{
                                 htmlFor: "product-name",
                                 children: "Product Name"
                             }, void 0, false, {
-                                fileName: "src/components/EditForm.js",
+                                fileName: "src/components/EditProductForm.js",
                                 lineNumber: 27,
                                 columnNumber: 11
                             }, undefined),
@@ -27725,13 +27725,13 @@ const EditForm = ({ product, toggle, onUpdateProduct })=>{
                                 },
                                 "aria-label": "Product Name"
                             }, void 0, false, {
-                                fileName: "src/components/EditForm.js",
+                                fileName: "src/components/EditProductForm.js",
                                 lineNumber: 28,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
-                        fileName: "src/components/EditForm.js",
+                        fileName: "src/components/EditProductForm.js",
                         lineNumber: 26,
                         columnNumber: 9
                     }, undefined),
@@ -27742,7 +27742,7 @@ const EditForm = ({ product, toggle, onUpdateProduct })=>{
                                 htmlFor: "product-price",
                                 children: "Price"
                             }, void 0, false, {
-                                fileName: "src/components/EditForm.js",
+                                fileName: "src/components/EditProductForm.js",
                                 lineNumber: 40,
                                 columnNumber: 11
                             }, undefined),
@@ -27755,13 +27755,13 @@ const EditForm = ({ product, toggle, onUpdateProduct })=>{
                                 },
                                 "aria-label": "Product Price"
                             }, void 0, false, {
-                                fileName: "src/components/EditForm.js",
+                                fileName: "src/components/EditProductForm.js",
                                 lineNumber: 41,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
-                        fileName: "src/components/EditForm.js",
+                        fileName: "src/components/EditProductForm.js",
                         lineNumber: 39,
                         columnNumber: 9
                     }, undefined),
@@ -27772,7 +27772,7 @@ const EditForm = ({ product, toggle, onUpdateProduct })=>{
                                 htmlFor: "product-quantity",
                                 children: "Quantity"
                             }, void 0, false, {
-                                fileName: "src/components/EditForm.js",
+                                fileName: "src/components/EditProductForm.js",
                                 lineNumber: 53,
                                 columnNumber: 11
                             }, undefined),
@@ -27785,13 +27785,13 @@ const EditForm = ({ product, toggle, onUpdateProduct })=>{
                                 },
                                 "aria-label": "Product Quantity"
                             }, void 0, false, {
-                                fileName: "src/components/EditForm.js",
+                                fileName: "src/components/EditProductForm.js",
                                 lineNumber: 54,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
-                        fileName: "src/components/EditForm.js",
+                        fileName: "src/components/EditProductForm.js",
                         lineNumber: 52,
                         columnNumber: 9
                     }, undefined),
@@ -27802,7 +27802,7 @@ const EditForm = ({ product, toggle, onUpdateProduct })=>{
                                 type: "submit",
                                 children: "Update"
                             }, void 0, false, {
-                                fileName: "src/components/EditForm.js",
+                                fileName: "src/components/EditProductForm.js",
                                 lineNumber: 66,
                                 columnNumber: 11
                             }, undefined),
@@ -27811,41 +27811,41 @@ const EditForm = ({ product, toggle, onUpdateProduct })=>{
                                 onClick: toggle,
                                 children: "Cancel"
                             }, void 0, false, {
-                                fileName: "src/components/EditForm.js",
+                                fileName: "src/components/EditProductForm.js",
                                 lineNumber: 67,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
-                        fileName: "src/components/EditForm.js",
+                        fileName: "src/components/EditProductForm.js",
                         lineNumber: 65,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/EditForm.js",
+                fileName: "src/components/EditProductForm.js",
                 lineNumber: 25,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/components/EditForm.js",
+        fileName: "src/components/EditProductForm.js",
         lineNumber: 23,
         columnNumber: 5
     }, undefined);
 };
-_s(EditForm, "rgPrmfGe6ch2RwJ8ZUNkcoilQPY=");
-_c = EditForm;
-exports.default = EditForm;
+_s(EditProductForm, "rgPrmfGe6ch2RwJ8ZUNkcoilQPY=");
+_c = EditProductForm;
+exports.default = EditProductForm;
 var _c;
-$RefreshReg$(_c, "EditForm");
+$RefreshReg$(_c, "EditProductForm");
 
-  $parcel$ReactRefreshHelpers$db68.postlude(module);
+  $parcel$ReactRefreshHelpers$56f7.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq"}],"h8J3U":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"h8J3U":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$ad24 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
