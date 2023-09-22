@@ -2,11 +2,17 @@ import { useState } from "react";
 import FormInput from "./FormInput";
 import FormButtons from "./FormButtons";
 
-const EditProductForm = ({ product, toggle, onUpdateProduct }) => {
+const EditProductForm = ({ product, toggleEditForm, onUpdateProduct }) => {
   const { _id: productId, title, price, quantity } = product;
   const [newTitle, setNewTitle] = useState(title);
   const [newPrice, setNewPrice] = useState(price);
   const [newQuantity, setNewQuantity] = useState(quantity);
+
+  const reset = () => {
+    setNewTitle(title);
+    setNewPrice(price);
+    setNewQuantity(quantity);
+  }
 
   const handleUpdate = (e) => {
     e.preventDefault();
@@ -17,7 +23,7 @@ const EditProductForm = ({ product, toggle, onUpdateProduct }) => {
         price: parseFloat(newPrice),
         quantity: parseInt(newQuantity, 10)
       },
-      toggle
+      toggleEditForm
     )
   }
 
@@ -50,7 +56,7 @@ const EditProductForm = ({ product, toggle, onUpdateProduct }) => {
           onChange={setNewQuantity}
           aria-label="Product Quantity"
           required />
-        <FormButtons submitText="Edit" onCancel={toggle} />
+        <FormButtons submitText="Update" onCancel={toggleEditForm} />
       </form>
     </div>
   );

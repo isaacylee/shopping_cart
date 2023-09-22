@@ -3,7 +3,7 @@ import AddProductForm from "./AddProductForm";
 import ProductsListing from "./ProductListing";
 import Cart from "./Cart";
 
-import { getProducts, createProduct, updateProductInfo, deleteProduct } from "../services/products";
+import { getProducts, createProduct, updateProduct, deleteProduct } from "../services/products";
 import { getCartItems, addToCart, cartCheckout } from "../services/cart";
 
 const App = () => {
@@ -36,7 +36,7 @@ const App = () => {
 
   const handleUpdateProduct = async (id, updatedInfo, callback) => {
     try {
-      const updatedProduct = await updateProductInfo(id, updatedInfo);
+      const updatedProduct = await updateProduct(id, updatedInfo);
       setProducts(products.map(product => {
         return product._id === id ? updatedProduct : product
       }));
