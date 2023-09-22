@@ -28,24 +28,19 @@ const App = () => {
     try {
       const createdProduct = await createProduct(newProduct);
       setProducts(products.concat(createdProduct));
-      if (callback) {
-        callback();
-      }
+      callback && callback();
     } catch(error) {
-      console.log(error);
+      console.log(error.message);
     }
   }
 
   const handleUpdateProduct = async (id, updatedInfo, callback) => {
     try {
       const updatedProduct = await updateProductInfo(id, updatedInfo);
-
       setProducts(products.map(product => {
-        return product._id == id ? updatedProduct : product
+        return product._id === id ? updatedProduct : product
       }));
-      if (callback) {
-        callback();
-      }
+      callback && callback();
     } catch(error) {
       console.log(error.message);
     }
@@ -55,26 +50,25 @@ const App = () => {
     try {
       await deleteProduct(id);
       setProducts(products.filter(product => {
-        return product._id != id;
+        return product._id !== id;
       }));
-    } catch(e) {
-      console.log(e);
+    } catch(error) {
+      console.log(error.message);
     }
   }
 
   const handleAddToCart = async (productId) => {
     const added = await addToCart(productId);
-
-    if (added.item.quantity == 1) {
+    if (added.item.quantity === 1) {
       setCartItems(cartItems.concat(added.item));
     } else {
       setCartItems(cartItems.map(item => {
-        return item._id == added.item._id ? added.item : item;
+        return item._id === added.item._id ? added.item : item;
       }));
     }
 
     setProducts(products.map(product => {
-      return product._id == productId ? added.product : product;
+      return product._id === productId ? added.product : product;
     }))
   }
 
@@ -82,8 +76,8 @@ const App = () => {
     try {
       await cartCheckout();
       setCartItems([]);
-    } catch(e) {
-      console.log(e);
+    } catch(error) {
+      console.log(error.message);
     }
   }
 
@@ -100,7 +94,7 @@ const App = () => {
           onUpdateProduct={handleUpdateProduct}
           onDeleteProduct={handleDeleteProduct}
         />
-        <AddProductForm onSubmit={handleAddProduct}/>
+        <AddProductForm onSubmit={handleAddProduct} />
       </main>
     </div>
   )

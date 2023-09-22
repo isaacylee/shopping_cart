@@ -3,8 +3,8 @@ import axios from "axios";
 import {
   GET_PRODUCTS,
   CREATE_PRODUCT,
-  updateProduct,
-  deleteProduct
+  updateProductRoute,
+  deleteProductRoute
 } from "../constants/routes"
 
 export const getProducts = async () => {
@@ -17,11 +17,11 @@ export const createProduct = async (newProduct) => {
   return data;
 }
 
-export const updateProductInfo = async (id, updatedProduct) => {
-  const { data } = await axios.put(updateProduct(id), updatedProduct);
+export const updateProduct = async (id, updatedProduct) => {
+  const { data } = await axios.put(updateProductRoute(id), updatedProduct);
   return data;
 }
 
 export const deleteProduct = async (id) => {
-  await axios.delete(deleteProduct(id));
+  await axios.delete(deleteProductRoute(id));
 }

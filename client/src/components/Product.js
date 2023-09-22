@@ -11,13 +11,13 @@ const Product = ({ product, onAddToCart, onUpdateProduct, onDeleteProduct }) => 
   }
 
   const toggleEditForm = (e) => {
-    if (e) { e.preventDefault(); }
+    e.preventDefault();
     setDisplayEditForm(!displayEditForm);
   }
 
   const handleDeleteProduct = (e) => {
     e.preventDefault();
-    onDeleteProduct(productId);
+    onDeleteProduct(productId); 
   }
   return (
     <li className="product">

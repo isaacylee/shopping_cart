@@ -1,4 +1,6 @@
 import { useState } from "react";
+import FormInput from "./FormInput";
+import FormButtons from "./FormButtons";
 
 const EditProductForm = ({ product, toggle, onUpdateProduct }) => {
   const { _id: productId, title, price, quantity } = product;
@@ -23,49 +25,32 @@ const EditProductForm = ({ product, toggle, onUpdateProduct }) => {
     <div className="edit-form">
       <h3>Edit Product</h3>
       <form action="" onSubmit={handleUpdate}>
-        <div className="input-group">
-          <label htmlFor="product-name">Product Name</label>
-          <input
-            type="text"
-            id="product-name"
-            value={newTitle}
-            onChange={(e) => {
-              setNewTitle(e.target.value)
-            }}
-            aria-label="Product Name"
-          />
-        </div>
-
-        <div className="input-group">
-          <label htmlFor="product-price">Price</label>
-          <input
-            type="number"
-            id="product-price"
-            value={newPrice}
-            onChange={(e) => {
-              setNewPrice(e.target.value)
-            }}
-            aria-label="Product Price"
-          />
-        </div>
-
-        <div className="input-group">
-          <label htmlFor="product-quantity">Quantity</label>
-          <input
-            type="number"
-            id="product-quantity"
-            value={newQuantity}
-            onChange={(e) => {
-              setNewQuantity(e.target.value)
-            }}
-            aria-label="Product Quantity"
-          />
-        </div>
-
-        <div className="actions form-actions">
-          <button type="submit">Update</button>
-          <button type="button" onClick={toggle}>Cancel</button>
-        </div>
+        <FormInput
+          type="text"
+          id="product-name"
+          value={newTitle}
+          label="Product Name"
+          onChange={setNewTitle}
+          aria-label="Product Name"
+          required
+        />
+        <FormInput
+          type="number"
+          id="product-price"
+          value={newPrice}
+          label="Price"
+          onChange={setNewPrice}
+          aria-label="Product Price"
+          required />
+        <FormInput
+          type="number"
+          id="product-quantity"
+          value={newQuantity}
+          label="Quantity"
+          onChange={setNewQuantity}
+          aria-label="Product Quantity"
+          required />
+        <FormButtons submitText="Edit" onCancel={toggle} />
       </form>
     </div>
   );
